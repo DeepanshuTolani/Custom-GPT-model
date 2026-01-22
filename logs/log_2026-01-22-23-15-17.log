@@ -1,0 +1,7 @@
+[2026-01-22 23:15:17,243] logger - INFO - Flask application starting...
+[2026-01-22 23:15:17,261] werkzeug - WARNING -  * Debugger is active!
+[2026-01-22 23:15:17,273] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-22 23:18:17,487] werkzeug - INFO - 127.0.0.1 - - [22/Jan/2026 23:18:17] "GET / HTTP/1.1" 200 -
+[2026-01-22 23:18:20,489] logger - INFO - Sending messages to Groq API...
+[2026-01-22 23:18:21,303] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+[2026-01-22 23:18:21,364] werkzeug - INFO - 127.0.0.1 - - [22/Jan/2026 23:18:21] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -

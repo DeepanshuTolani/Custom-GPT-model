@@ -1,0 +1,6 @@
+[2026-01-16 22:26:52,608] logger - INFO - Flask application starting...
+[2026-01-16 22:26:52,622] werkzeug - WARNING -  * Debugger is active!
+[2026-01-16 22:26:52,633] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-16 22:27:07,169] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\app\\routes.py', reloading
+[2026-01-16 22:27:07,170] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\app\\routes.py', reloading
+[2026-01-16 22:27:07,174] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\app\\routes.py', reloading

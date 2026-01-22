@@ -1,0 +1,13 @@
+[2026-01-16 21:09:36,080] logger - INFO - Flask application starting...
+[2026-01-16 21:09:36,095] werkzeug - WARNING -  * Debugger is active!
+[2026-01-16 21:09:36,111] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-16 21:09:42,931] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 21:09:42] "GET / HTTP/1.1" 200 -
+[2026-01-16 21:09:43,103] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 21:09:43] "[33mGET /static/images/Apexiq-logo-whitebg.jpeg HTTP/1.1[0m" 404 -
+[2026-01-16 21:09:43,263] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 21:09:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+[2026-01-16 21:09:47,813] logger - INFO - Sending messages to Groq API...
+[2026-01-16 21:09:48,107] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+[2026-01-16 21:09:48,109] logger - ERROR - Error communicating with Groq API: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+[2026-01-16 21:09:48,113] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 21:09:48] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-16 21:13:28,245] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\app\\api_client.py', reloading
+[2026-01-16 21:13:28,246] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\app\\api_client.py', reloading
+[2026-01-16 21:13:28,247] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\app\\api_client.py', reloading

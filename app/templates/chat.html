@@ -1,0 +1,985 @@
+<!-- templates/chat.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='images/Apexiq-logo-whitebg.jpeg') }}" alt="Logo" class="logo">
+        <h1>PWGPT</h1>
+    </header> -->
+
+    <!-- <main class="chat-area">
+        <div class="chat-box" id="chat-box"> -->
+            <!-- Initial AI message -->
+            <!-- <div class="ai-message">
+                <p>Welcome! How can I assist you today?</p>
+            </div>
+        </div>
+        <div class="input-area">
+            <textarea id="user-input" placeholder="Type your message here..."></textarea>
+            <button id="send-button">Send</button>
+        </div>
+    </main> -->
+
+    <!-- <script>
+        document.getElementById('send-button').addEventListener('click', function() {
+            const userInput = document.getElementById('user-input');
+            const message = userInput.value;
+
+            if (message.trim() === "") { -->
+                <!-- return; // Do not send empty messages
+            }
+
+            // Append user's message
+            const chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += `<div class="user-message"><p>${message}</p></div>`;
+            userInput.value = ''; -->
+
+        <!-- //    // Send the message to the server -->
+            <!-- fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.response) {
+                    chatBox.innerHTML += `<div class="ai-message">${data.response}</div>`;
+                } else {
+                    chatBox.innerHTML += `<div class="error-message"><p>Error: ${data.error}</p></div>`;
+                }
+                chatBox.scrollTop = chatBox.scrollHeight;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                chatBox.innerHTML += `<div class="error-message"><p>Error communicating with the server.</p></div>`;
+            });
+        });
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepanshu - Advanced AI Tutor Platform</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --bg-dark: #0f172a;
+            --bg-darker: #020617;
+            --text-light: #f1f5f9;
+            --text-gray: #94a3b8;
+            --border: #1e293b;
+            --success: #10b981;
+            --error: #ef4444;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-darker);
+            color: var(--text-light);
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .orb1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--primary), var(--secondary));
+            top: -200px;
+            right: -200px;
+            animation-delay: 0s;
+        }
+
+        .orb2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent), var(--secondary));
+            bottom: -150px;
+            left: -150px;
+            animation-delay: -10s;
+        }
+
+        .orb3 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, var(--secondary), var(--primary));
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(50px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-50px, 50px) scale(0.9);
+            }
+        }
+
+        /* Container */
+        .container {
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(99, 102, 241, 0.8);
+            }
+        }
+
+        .logo-text h1 {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-top: 2px;
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 30px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main Chat Area */
+        .main-content {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+            padding: 20px 40px;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-section h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-gray);
+            margin-bottom: 12px;
+        }
+
+        .feature-card {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .feature-card h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            font-size: 12px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        /* Chat Container */
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .chat-box {
+            flex: 1;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .chat-box::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .chat-box::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .chat-box::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            border-radius: 10px;
+        }
+
+        /* Messages */
+        .message-wrapper {
+            display: flex;
+            gap: 12px;
+            animation: messageSlide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-wrapper.user {
+            flex-direction: row-reverse;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .avatar.ai {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .avatar.user {
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+        }
+
+        .message-content {
+            max-width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .message-author {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: var(--text-gray);
+        }
+
+        .message-bubble {
+            padding: 16px 20px;
+            border-radius: 16px;
+            line-height: 1.6;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .message-bubble.ai {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-top-left-radius: 4px;
+        }
+
+        .message-bubble.user {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.2));
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            border-top-right-radius: 4px;
+        }
+
+        .message-bubble.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 0;
+        }
+
+        .typing-indicator.active {
+            display: flex;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 6px;
+            padding: 16px 20px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 16px;
+            border-top-left-radius: 4px;
+        }
+
+        .typing-dots span {
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: typingBounce 1.4s infinite ease-in-out both;
+        }
+
+        .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typingBounce {
+            0%, 80%, 100% {
+                transform: scale(0.5);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Input Area */
+        .input-container {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        textarea {
+            width: 100%;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px 20px;
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 15px;
+            resize: none;
+            outline: none;
+            transition: all 0.3s ease;
+            min-height: 52px;
+            max-height: 150px;
+        }
+
+        textarea::placeholder {
+            color: var(--text-gray);
+        }
+
+        textarea:focus {
+            border-color: var(--primary);
+            background: rgba(30, 41, 59, 0.8);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .input-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            width: 52px;
+            height: 52px;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .icon-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--primary);
+        }
+
+        .send-btn {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(99, 102, 241, 0.5);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Suggestions */
+        .suggestions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .suggestion-chip {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .suggestion-chip:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Upload notification */
+        .upload-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            animation: slideInRight 0.3s ease;
+        }
+
+        .upload-notification.show {
+            display: flex;
+        }
+
+        .upload-notification.success {
+            border-color: var(--success);
+        }
+
+        .upload-notification.error {
+            border-color: var(--error);
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none;
+            }
+            
+            .header-stats {
+                display: none;
+            }
+
+            .main-content {
+                padding: 15px 20px;
+            }
+
+            .header {
+                padding: 15px 20px;
+            }
+
+            .message-content {
+                max-width: 85%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .logo-text h1 {
+                font-size: 20px;
+            }
+
+            .logo-text p {
+                display: none;
+            }
+
+            .avatar {
+                width: 32px;
+                height: 32px;
+                font-size: 12px;
+            }
+
+            .message-bubble {
+                font-size: 14px;
+                padding: 12px 16px;
+            }
+
+            .input-container {
+                padding: 15px;
+            }
+
+            .icon-btn {
+                width: 44px;
+                height: 44px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="gradient-orb orb1"></div>
+        <div class="gradient-orb orb2"></div>
+        <div class="gradient-orb orb3"></div>
+    </div>
+
+    <!-- Upload notification -->
+    <div class="upload-notification" id="upload-notification">
+        <span id="notification-message"></span>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo">AI</div>
+                <div class="logo-text">
+                    <h1>Deepanshu AI Studio</h1>
+                    <p>Advanced AI Tutor Platform</p>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Available</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="response-time">~2s</div>
+                    <div class="stat-label">Response</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="message-count">0</div>
+                    <div class="stat-label">Messages</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Quick Actions</h3>
+                    <div class="feature-card" onclick="insertPrompt('Explain quantum computing')">
+                        <h4>📚 Explain Concepts</h4>
+                        <p>Deep dive into complex topics</p>
+                    </div>
+                    <div class="feature-card" onclick="insertPrompt('Help me solve this problem')">
+                        <h4>🧮 Problem Solving</h4>
+                        <p>Step-by-step solutions</p>
+                    </div>
+                    <div class="feature-card" onclick="insertPrompt('Generate practice questions on')">
+                        <h4>✍️ Practice Questions</h4>
+                        <p>Test your knowledge</p>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Features</h3>
+                    <div class="feature-card">
+                        <h4>⚡ Real-time Responses</h4>
+                        <p>Instant AI-powered answers</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎯 Personalized Learning</h4>
+                        <p>Adaptive to your pace</p>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="chat-container">
+                <div class="chat-box" id="chat-box">
+                    <div class="message-wrapper">
+                        <div class="avatar ai">AI</div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="message-author">Deepanshu Virtual Assistant</span>
+                                <span class="message-time" id="welcome-time"></span>
+                            </div>
+                            <div class="message-bubble ai">
+                                <p>👋 Welcome to Deepanshu AI Studio! I'm your advanced AI tutor, ready to help you master any subject. Whether you need explanations, problem-solving assistance, or practice questions, I'm here to guide your learning journey.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="suggestions">
+                        <div class="suggestion-chip" onclick="insertPrompt('Explain the theory of relativity')">Explain the theory of relativity</div>
+                        <div class="suggestion-chip" onclick="insertPrompt('Help with calculus derivatives')">Help with calculus</div>
+                        <div class="suggestion-chip" onclick="insertPrompt('Teach me Python programming')">Learn Python</div>
+                    </div>
+
+                    <div class="typing-indicator" id="typing-indicator">
+                        <div class="avatar ai">AI</div>
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea id="user-input" placeholder="Ask me anything... (Press Enter to send, Shift+Enter for new line)" rows="1"></textarea>
+                    </div>
+                    <div class="input-actions">
+                        <!-- Hidden file input -->
+                        <input type="file" id="fileUpload" style="display:none" accept=".pdf,.doc,.docx,.txt" />
+                        
+                        <!-- Attach button -->
+                        <button class="icon-btn" title="Attach file" onclick="document.getElementById('fileUpload').click()">📎</button>
+                        
+                        <!-- Send button -->
+                        <button class="icon-btn send-btn" id="send-button" title="Send message">🚀</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const messageCountEl = document.getElementById('message-count');
+        const fileUpload = document.getElementById('fileUpload');
+        const uploadNotification = document.getElementById('upload-notification');
+        const notificationMessage = document.getElementById('notification-message');
+        let messageCount = 0;
+
+        // Set welcome time
+        document.getElementById('welcome-time').textContent = new Date().toLocaleTimeString('en-US', { 
+            hour: '2-digit', 
+            minute: '2-digit' 
+        });
+
+        // Auto-resize textarea
+        userInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 150) + 'px';
+        });
+
+        // Send on Enter, new line on Shift+Enter
+        userInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        sendButton.addEventListener('click', sendMessage);
+
+        // File upload handler
+        fileUpload.addEventListener('change', function() {
+            const file = this.files[0];
+            if (!file) return;
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            showNotification('📤 Uploading document...', 'info');
+
+            fetch('/api/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                showNotification('✅ Document uploaded successfully!', 'success');
+                // Reset file input
+                fileUpload.value = '';
+            })
+            .catch(err => {
+                showNotification('❌ Upload failed. Please try again.', 'error');
+                console.error('Upload error:', err);
+                fileUpload.value = '';
+            });
+        });
+
+        function showNotification(message, type) {
+            notificationMessage.textContent = message;
+            uploadNotification.className = 'upload-notification show ' + type;
+            
+            setTimeout(() => {
+                uploadNotification.classList.remove('show');
+            }, 3000);
+        }
+
+        function insertPrompt(text) {
+            userInput.value = text;
+            userInput.focus();
+        }
+
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (message === "") return;
+
+            // Disable input
+            userInput.disabled = true;
+            sendButton.disabled = true;
+
+            // Add user message
+            addMessage(message, 'user');
+            userInput.value = '';
+            userInput.style.height = 'auto';
+
+            // Show typing indicator
+            typingIndicator.classList.add('active');
+            scrollToBottom();
+
+            // API call
+            const startTime = Date.now();
+            
+            fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                const responseTime = ((Date.now() - startTime) / 1000).toFixed(1);
+                document.getElementById('response-time').textContent = `~${responseTime}s`;
+                
+                typingIndicator.classList.remove('active');
+                
+                if (data.response) {
+                    addMessage(data.response, 'ai');
+                } else {
+                    addMessage(`❌ Error: ${data.error || 'Unknown error occurred'}`, 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                typingIndicator.classList.remove('active');
+                addMessage('⚠️ Unable to connect to the server. Please check your connection and try again.', 'error');
+            })
+            .finally(() => {
+                userInput.disabled = false;
+                sendButton.disabled = false;
+                userInput.focus();
+            });
+        }
+
+        function addMessage(text, type) {
+            messageCount++;
+            messageCountEl.textContent = messageCount;
+
+            // Remove suggestions after first message
+            const suggestions = document.querySelector('.suggestions');
+            if (suggestions && messageCount > 1) {
+                suggestions.remove();
+            }
+
+            const wrapper = document.createElement('div');
+            wrapper.className = `message-wrapper ${type}`;
+
+            const avatar = document.createElement('div');
+            avatar.className = `avatar ${type}`;
+            avatar.textContent = type === 'user' ? 'You' : 'AI';
+
+            const content = document.createElement('div');
+            content.className = 'message-content';
+
+            const header = document.createElement('div');
+            header.className = 'message-header';
+            
+            const author = document.createElement('span');
+            author.className = 'message-author';
+            author.textContent = type === 'user' ? 'You' : 'Deepanshu Virtual Assistant';
+            
+            const time = document.createElement('span');
+            time.className = 'message-time';
+            time.textContent = new Date().toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+
+            header.appendChild(author);
+            header.appendChild(time);
+
+            const bubble = document.createElement('div');
+            bubble.className = `message-bubble ${type}`;
+            
+            const p = document.createElement('p');
+            // Use innerHTML to render HTML formatting from API response
+            p.innerHTML = text;
+            bubble.appendChild(p);
+
+            content.appendChild(header);
+            content.appendChild(bubble);
+
+            wrapper.appendChild(avatar);
+            wrapper.appendChild(content);
+
+            chatBox.insertBefore(wrapper, typingIndicator);
+            scrollToBottom();
+        }
+
+        function scrollToBottom() {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        // Focus input on load
+        userInput.focus();
+    </script>
+</body>
+</html>

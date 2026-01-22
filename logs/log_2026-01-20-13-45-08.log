@@ -1,0 +1,12 @@
+[2026-01-20 13:45:08,736] logger - INFO - Flask application starting...
+[2026-01-20 13:45:08,760] werkzeug - WARNING -  * Debugger is active!
+[2026-01-20 13:45:08,777] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-20 13:46:03,250] werkzeug - INFO - 127.0.0.1 - - [20/Jan/2026 13:46:03] "GET / HTTP/1.1" 200 -
+[2026-01-20 13:46:04,206] werkzeug - INFO - 127.0.0.1 - - [20/Jan/2026 13:46:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2026-01-20 13:58:31,030] logger - INFO - Sending messages to Groq API...
+[2026-01-20 13:58:31,980] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+[2026-01-20 13:58:32,042] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\flask\\app.py', reloading
+[2026-01-20 13:58:32,063] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\groq\\resources\\chat\\completions.py', reloading
+[2026-01-20 13:58:32,081] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\groq\\_base_client.py', reloading
+[2026-01-20 13:58:32,084] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\httpx\\_models.py', reloading
+[2026-01-20 13:58:32,116] werkzeug - INFO - 127.0.0.1 - - [20/Jan/2026 13:58:32] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -

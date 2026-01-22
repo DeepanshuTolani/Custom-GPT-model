@@ -1,0 +1,19 @@
+[2026-01-16 19:49:30,676] logger - INFO - Flask application starting...
+[2026-01-16 19:49:30,715] werkzeug - WARNING -  * Debugger is active!
+[2026-01-16 19:49:30,754] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-16 19:49:42,428] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 19:49:42] "GET / HTTP/1.1" 200 -
+[2026-01-16 19:49:42,699] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 19:49:42] "[33mGET /static/images/Apexiq-logo-whitebg.jpeg HTTP/1.1[0m" 404 -
+[2026-01-16 19:49:42,900] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 19:49:42] "GET /static/css/styles.css HTTP/1.1" 200 -
+[2026-01-16 19:49:43,008] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 19:49:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2026-01-16 19:50:11,664] logger - INFO - Sending messages to Groq API...
+[2026-01-16 19:50:12,384] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+[2026-01-16 19:50:12,385] logger - ERROR - Error communicating with Groq API: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+[2026-01-16 19:50:12,388] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 19:50:12] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-16 19:50:19,688] logger - INFO - Sending messages to Groq API...
+[2026-01-16 19:50:19,979] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+[2026-01-16 19:50:19,980] logger - ERROR - Error communicating with Groq API: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+[2026-01-16 19:50:19,982] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 19:50:19] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-16 19:50:50,413] logger - INFO - Sending messages to Groq API...
+[2026-01-16 19:50:50,740] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+[2026-01-16 19:50:50,741] logger - ERROR - Error communicating with Groq API: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+[2026-01-16 19:50:50,743] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 19:50:50] "POST /api/chat HTTP/1.1" 200 -

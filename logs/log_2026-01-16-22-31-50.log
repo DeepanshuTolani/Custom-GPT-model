@@ -1,0 +1,22 @@
+[2026-01-16 22:31:50,521] logger - INFO - Flask application starting...
+[2026-01-16 22:31:50,598] werkzeug - WARNING -  * Debugger is active!
+[2026-01-16 22:31:50,633] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-16 22:31:53,399] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 22:31:53] "GET / HTTP/1.1" 200 -
+[2026-01-16 22:32:46,355] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 22:32:46] "GET / HTTP/1.1" 200 -
+[2026-01-16 22:33:00,425] logger - INFO - Sending messages to Groq API...
+[2026-01-16 22:33:00,933] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-16 22:33:00,945] logger - INFO - Received response from Groq API.
+[2026-01-16 22:33:00,950] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 22:33:00] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-16 22:36:47,606] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 22:36:47] "GET / HTTP/1.1" 200 -
+[2026-01-16 22:36:52,091] logger - INFO - Sending messages to Groq API...
+[2026-01-16 22:36:52,351] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-16 22:36:52,356] logger - INFO - Received response from Groq API.
+[2026-01-16 22:36:52,361] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 22:36:52] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-16 22:36:59,238] logger - INFO - Sending messages to Groq API...
+[2026-01-16 22:36:59,532] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-16 22:36:59,534] logger - INFO - Received response from Groq API.
+[2026-01-16 22:36:59,539] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 22:36:59] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-16 22:37:11,323] logger - INFO - Sending messages to Groq API...
+[2026-01-16 22:37:11,945] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-16 22:37:11,948] logger - INFO - Received response from Groq API.
+[2026-01-16 22:37:11,951] werkzeug - INFO - 127.0.0.1 - - [16/Jan/2026 22:37:11] "POST /api/chat HTTP/1.1" 200 -
