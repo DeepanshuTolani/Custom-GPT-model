@@ -1,0 +1,14 @@
+[2026-01-23 00:48:58,397] logger - INFO - Flask application starting...
+[2026-01-23 00:48:58,433] werkzeug - WARNING -  * Debugger is active!
+[2026-01-23 00:48:58,453] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-23 00:48:58,501] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:48:58] "GET / HTTP/1.1" 200 -
+[2026-01-23 00:49:01,099] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:49:01,350] groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.448204 seconds
+[2026-01-23 00:49:01,804] groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.885053 seconds
+[2026-01-23 00:49:02,746] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py', reloading
+[2026-01-23 00:49:02,753] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\httpcore\\_sync\\connection_pool.py', reloading
+[2026-01-23 00:49:02,760] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\httpcore\\_sync\\connection.py', reloading
+[2026-01-23 00:49:02,767] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\httpcore\\_backends\\sync.py', reloading
+[2026-01-23 00:49:02,774] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\httpcore\\_exceptions.py', reloading
+[2026-01-23 00:49:02,786] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\socket.py', reloading
+[2026-01-23 00:49:02,861] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:49:02] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -

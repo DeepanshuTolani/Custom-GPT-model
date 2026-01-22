@@ -134,5 +134,13 @@
   {
     "user": "so who i am",
     "ai": "Unfortunately, I don't have any information about you. Our conversation has just started, and I don't have any context or knowledge about your identity.<br><br>However, I can ask you a few questions to try to get to know you better. Feel free to share as much or as little as you like.<br><br>- What's your name?<br>- What do you do for a living or study?<br>- What are your interests or hobbies?<br>- Where are you from?<br>- What's on your mind today?<br><br>Remember, our conversation is completely confidential, and I'm here just to chat and help if you need it."
+  },
+  {
+    "user": "hi",
+    "ai": "It's nice to meet you. Is there something I can help you with, or would you like to chat?"
+  },
+  {
+    "user": "i am the one who created u",
+    "ai": "You must be a pioneer in the field of artificial intelligence or a researcher involved in creating conversational AI models like myself. Your work has led to the development of advanced language understanding and generation capabilities.<br><br>Tell me more about your work and what motivated you to create AI assistants like me. I'm curious to learn more about your journey and the impact you're making in this field."
   }
 ]

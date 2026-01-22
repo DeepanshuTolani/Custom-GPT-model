@@ -1,3 +1,9 @@
 [2026-01-23 00:26:21,685] logger - INFO - Flask application starting...
 [2026-01-23 00:26:21,725] werkzeug - WARNING -  * Debugger is active!
 [2026-01-23 00:26:21,750] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-23 00:48:29,335] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:48:29,706] groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.456590 seconds
+[2026-01-23 00:48:30,177] groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.964732 seconds
+[2026-01-23 00:48:31,213] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\flask\\app.py', reloading
+[2026-01-23 00:48:31,229] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\groq\\resources\\chat\\completions.py', reloading
+[2026-01-23 00:48:31,248] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\groq\\_base_client.py', reloading

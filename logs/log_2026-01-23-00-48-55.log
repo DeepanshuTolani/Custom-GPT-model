@@ -1,0 +1,10 @@
+[2026-01-23 00:48:55,176] logger - INFO - Flask application starting...
+[2026-01-23 00:48:55,206] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2026-01-23 00:48:55,206] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2026-01-23 00:48:55,225] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2026-01-23 00:49:03,882] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2026-01-23 00:53:04,382] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2026-01-23 00:53:16,616] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2026-01-23 00:55:20,214] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[2026-01-23 00:56:39,978] werkzeug - INFO -  * Restarting with watchdog (windowsapi)
