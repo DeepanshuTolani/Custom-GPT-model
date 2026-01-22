@@ -89,15 +89,3 @@ class GroqClient:
         except Exception as e:
             print("🔥 GROQ ERROR FULL DETAILS:", repr(e))
             raise
-# API key for Groq
-# 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
-
-#API_KEY=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
-# API key for Groq
-# GROQ_API_KEY=gsk_03Z175IrbE3UXyZkuvrAWGdyb3FY3bRE0LYS7cafckZVz6mN9V7
-
-# GROQ_API_KEY=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
-
-
-
-# GROQ_API_KEY=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

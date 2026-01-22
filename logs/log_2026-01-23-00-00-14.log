@@ -1,3 +1,40 @@
 [2026-01-23 00:00:14,440] logger - INFO - Flask application starting...
 [2026-01-23 00:00:14,468] werkzeug - WARNING -  * Debugger is active!
 [2026-01-23 00:00:14,485] werkzeug - INFO -  * Debugger PIN: 436-088-871
+[2026-01-23 00:00:16,483] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:00:16] "GET / HTTP/1.1" 200 -
+[2026-01-23 00:00:20,233] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:00:21,083] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-23 00:00:21,085] logger - INFO - Received response from Groq API.
+[2026-01-23 00:00:21,092] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:00:21] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-23 00:00:25,504] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:00:25,909] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-23 00:00:25,912] logger - INFO - Received response from Groq API.
+[2026-01-23 00:00:25,917] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:00:25] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-23 00:00:35,400] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:00:35,998] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-23 00:00:36,002] logger - INFO - Received response from Groq API.
+[2026-01-23 00:00:36,017] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:00:36] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-23 00:00:50,484] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:00:50,915] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-23 00:00:50,917] logger - INFO - Received response from Groq API.
+[2026-01-23 00:00:50,921] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:00:50] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-23 00:00:59,934] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:01:00,265] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-23 00:01:00,270] logger - INFO - Received response from Groq API.
+[2026-01-23 00:01:00,284] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:01:00] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-23 00:01:11,315] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:01:11,664] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-23 00:01:11,665] logger - INFO - Received response from Groq API.
+[2026-01-23 00:01:11,670] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:01:11] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-23 00:01:30,832] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:01:31,263] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-23 00:01:31,265] logger - INFO - Received response from Groq API.
+[2026-01-23 00:01:31,276] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:01:31] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-23 00:01:40,465] logger - INFO - Sending messages to Groq API...
+[2026-01-23 00:01:41,032] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-01-23 00:01:41,033] logger - INFO - Received response from Groq API.
+[2026-01-23 00:01:41,040] werkzeug - INFO - 127.0.0.1 - - [23/Jan/2026 00:01:41] "POST /api/chat HTTP/1.1" 200 -
+[2026-01-23 00:17:51,781] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\app\\init.py', reloading
+[2026-01-23 00:17:52,028] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\app_2.py', reloading
+[2026-01-23 00:17:52,092] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\config\\__init__.py', reloading
+[2026-01-23 00:17:52,178] werkzeug - INFO -  * Detected change in 'C:\\Users\\Dell\\Desktop\\custom-gpt\\Custom-Chatgpt-Project-main\\logger\\__init__.py', reloading
