@@ -1,7 +1,7 @@
 
 # **DEEPANSHU GPT Chat Application**
 
-PWGPT is an AI-powered chat application that allows users to interact with a conversational AI model. This application provides concise answers to user queries and offers detailed explanations when requested.
+DEEPANSHU_TOLANI_GPT is an AI-powered chat application that allows users to interact with a conversational AI model. This application provides concise answers to user queries and offers detailed explanations when requested.
 
 ### **Features:**
 
