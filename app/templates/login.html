@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Login</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background: #020617;
+            padding: 30px;
+            border-radius: 10px;
+            width: 320px;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 15px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .error {
+            color: #f87171;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🔐 Enter Access Token</h2>
+    <input type="password" id="token" placeholder="Enter token">
+    <button onclick="login()">Login</button>
+    <div id="error" class="error"></div>
+</div>
+
+<script>
+    const FIXED_TOKEN = "deep27";
+
+    function login() {
+        const userToken = document.getElementById("token").value;
+
+        if (userToken === FIXED_TOKEN) {
+            sessionStorage.setItem("authorized", "true");
+            window.location.href = "/";
+        } else {
+            document.getElementById("error").innerText = "❌ Invalid token!";
+        }
+    }
+</script>
+
+</body>
+</html>
