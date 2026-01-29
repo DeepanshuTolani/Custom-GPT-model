@@ -13,9 +13,22 @@
 import os
 from app import create_app
 
-# Create Flask application
+# Create Flask app
 app = create_app()
 
-# Optional: helpful log for debugging
 print("✅ Flask app loaded successfully")
-print("📁 Current working directory:", os.getcwd())
+print("📂 Current working directory:", os.getcwd())
+
+if __name__ == "__main__":
+    print("🚀 Flask app is running on http://0.0.0.0:5000")
+    app.run(host="0.0.0.0", port=5000, debug=False)
+
+# import os
+# from app import create_app
+
+# # Create Flask application
+# app = create_app()
+
+# # Optional: helpful log for debugging
+# print("✅ Flask app loaded successfully")
+# print("📁 Current working directory:", os.getcwd())
