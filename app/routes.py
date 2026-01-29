@@ -207,7 +207,7 @@ def save_message(user_msg, ai_msg):
 def index():
     """Render the chat interface."""
     return render_template('chat.html')
-    
+from flask import render_template, redirect, url_for
 @main.route("/login")
 def login():
     return render_template("login.html")
