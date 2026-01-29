@@ -207,7 +207,10 @@ def save_message(user_msg, ai_msg):
 def index():
     """Render the chat interface."""
     return render_template('chat.html')
-
+    
+@main.route("/login")
+def login():
+    return render_template("login.html")
 
 # ---------- CHAT API ----------
 @main.route('/api/chat', methods=['POST'])
